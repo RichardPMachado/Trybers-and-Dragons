@@ -11,7 +11,7 @@ export default class Warrior extends Archetype {
     this._energyType = 'stamina';
   }
 
-  static createdArcheTypeInstances() {
+  static createdArchetypeInstances() {
     return Warrior._createdArcheTypeInstances;
   }
 

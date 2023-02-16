@@ -11,7 +11,7 @@ export default class Mage extends Archetype {
     this._energyType = 'mana';
   }
 
-  static createdArcheTypeInstances() {
+  static createdArchetypeInstances() {
     return Mage._createdArcheTypeInstances;
   }
 
