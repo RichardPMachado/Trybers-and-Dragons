@@ -7,3 +7,7 @@ export default interface Fighter extends SimpleFighter {
   special?(enemy: Fighter): void;
   levelUp(): void;
 }
+
+//  name: deve ser recebido como parâmetro no 
+//  construtor e deve ser usado para dar nome 
+//  à sua personagem.
