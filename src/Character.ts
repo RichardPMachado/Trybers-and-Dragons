@@ -57,14 +57,14 @@ export default class Character implements Fighter {
   }
 
   receiveDamage(attackPoints: number): number {
-    const damage: number = attackPoints - this.defense;
-
-    if (this._lifePoints - damage <= 0) {
-      this._lifePoints -= 1;
-    }
+    const damage: number = attackPoints - this._defense;
     if (damage > 0) {
       this._lifePoints -= damage;
     } 
+
+    if (this._lifePoints <= 0) {
+      this._lifePoints = -1;
+    }
     return this._lifePoints;
   }
 
@@ -82,7 +82,7 @@ export default class Character implements Fighter {
     
     this._strength += getRandomInt(1, 10);
     this._defense += getRandomInt(1, 10);
-    this.energy.amount = 10;
+    this._energy.amount = 10;
     this._lifePoints = this._maxLifePoints;
   }
 
