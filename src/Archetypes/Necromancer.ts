@@ -11,11 +11,11 @@ export default class Necromancer extends Archetype {
     this._energyType = 'mana';
   }
 
-  static createdArchetypeInstances() {
+  static override createdArchetypeInstances() {
     return Necromancer._createdArcheTypeInstances;
   }
 
-  get energyType(): EnergyType {
+  override get energyType(): EnergyType {
     return this._energyType;
   }
 }

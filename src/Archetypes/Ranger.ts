@@ -11,11 +11,11 @@ export default class Ranger extends Archetype {
     this._energyType = 'stamina';
   }
  
-  static createdArchetypeInstances() {
+  static override createdArchetypeInstances() {
     return Ranger._createdArcheTypeInstances;
   }
 
-  get energyType(): EnergyType {
+  override get energyType(): EnergyType {
     return this._energyType;
   }
 }

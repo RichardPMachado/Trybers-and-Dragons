@@ -20,7 +20,7 @@ export default class Monster implements SimpleFighter {
   receiveDamage(attackPoints: number): number {
     const damage: number = this._lifePoints - attackPoints;
     if (damage > 0) {
-      this._lifePoints -= damage;
+      this._lifePoints -= attackPoints;
     } 
 
     if (this._lifePoints <= 0) {

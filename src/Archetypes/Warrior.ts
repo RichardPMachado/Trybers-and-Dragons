@@ -11,11 +11,11 @@ export default class Warrior extends Archetype {
     this._energyType = 'stamina';
   }
 
-  static createdArchetypeInstances() {
+  static override createdArchetypeInstances() {
     return Warrior._createdArcheTypeInstances;
   }
 
-  get energyType(): EnergyType {
+  override get energyType(): EnergyType {
     return this._energyType;
   }
 }
